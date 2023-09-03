@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-color: #c0bbc1;
+  color: #ccd9e4;
+  font-family: 'Roboto', sans-serif;
+}
+
+.gerador form {
+  background-color: #252626;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gerador-display {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.gerador-display h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.gerador-display input {
+  border: none;
+  outline: none;
+  width: 30ch;
+  padding: 16px 12px;
+  font-size: 24px;
+  pointer-events: none;
+  background-color: #535353;
+  color: #d8d8d8;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.gerador-config {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.gerador-config div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.25rem;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #535353;
+}
+
+.gerador-length input{
+  width: 12ch;
+  padding: 8px;
+  text-align: center;
+  background-color: #535353;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: #d8d8d8;
+  font-size: 1.1rem;
+}
+
+.gerador-length input::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.gerador-check input {
+  all: unset;
+  background-color: #535353;
+  border-radius: 50%;
+  border: 2px solid #111;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+
+.gerador-check input:checked {
+  background-color: blue;
+}
+
+.gerador-check label {
+  cursor: pointer;
+}
+
+.gerador-bt {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  position: relative;
+}
+
+.gerador-bt button {
+  padding: 12px 32px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #1a1b1b;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #d8d8d8;
+  transition: 0.3s;
+}
+
+.gerador-bt button:hover {
+  box-shadow: 0 0 0 2px #535353;
+  background-color: #121313;
+}
+
+.gerador-bt span.erroSpan {
+  color: #d12828;
+  position: absolute;
+  right: 12px;
+  top: 15px;
+}
+
+
+.gerador-bt button.erro {
+  animation: .3s error forwards;
+  box-shadow: 0 0 0 2px red;
+}
+
+@keyframes error {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}

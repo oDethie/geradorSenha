@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="gerador">
+      <form action="">
+        <div class="gerador-display">
+          <h1>Gerador de Senha.</h1>
+          <input data-input="display" type="text">
+        </div>
+  
+        <div class="gerador-config">
+          <div class="gerador-length">
+            <input data-input="length" type="number" name="length" id="length" placeholder="10" value="10">
+            <label for="length">Password Length</label>
+          </div>
+
+          <div class="gerador-check">
+            <input data-input="info" type="checkbox" name="min" value="min" id="min" checked>
+            <label for="min">Include LowerCase Letters</label>
+          </div>
+
+          <div class="gerador-check">
+            <input data-input="info" type="checkbox" name="max" value="max" id="max">
+            <label for="max">Include UpperCase Letters</label>
+          </div>
+
+          <div class="gerador-check">
+            <input data-input="info" type="checkbox" name="number" value="number" id="number">
+            <label for="number">Include Numbers</label>
+          </div>
+
+          <div class="gerador-check">
+            <input data-input="info" type="checkbox" name="symbol" value="symbol" id="symbol">
+            <label for="symbol">Include Symbols</label>
+          </div>
+        </div>
+
+        <div class="gerador-bt">
+          <button data-input="button">Enviar</button>
+        </div>
+      </form>
+    </section>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>
